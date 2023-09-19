@@ -1,26 +1,40 @@
-import Link from 'next/link'
-import swagPhotos from '../photos'
-import Image from 'next/image'
+import Link from "next/link";
+import swagPhotos from "../photos";
+import Image from "next/image";
+import Navbar from "../components/navbar/Navbar";
+import Footer, { BuildIcon } from "../components/footer/Footer";
 
 export default function Home() {
-  const photos = swagPhotos
+  const photos = swagPhotos;
 
   return (
-    <main className="container mx-auto">
-      <h1 className="text-center text-4xl font-bold m-10">NextGram</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-max	 gap-6 m-10">
-        {photos.map(({ id, imageSrc }) => (
-          <Link key={id} href={`/photos/${id}`}>
-            <Image
-              alt=""
-              src={imageSrc}
-              height={500}
-              width={500}
-              className="w-full object-cover aspect-square"
-            />
-          </Link>
-        ))}
-      </div>
-    </main>
-  )
+    <>
+      <Navbar />
+      <main className="container mx-auto px-5">
+        <div className="pt-24 pb-12">
+          <h1 className="flex items-center gap-2">
+            <BuildIcon />
+            <div>
+              <h1 className="text-3xl sf-pro ">La olmeda</h1>
+              <p className="text-sm">Jose Maria Bedoya 332</p>
+            </div>
+          </h1>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 auto-rows-max gap-6 ">
+          {photos.map(({ id, imageSrc }) => (
+            <Link key={id} href={`/photos/${id}`}>
+              <Image
+                alt=""
+                src={imageSrc}
+                height={300}
+                width={300}
+                className="w-full object-cover aspect-square"
+              />
+            </Link>
+          ))}
+        </div>
+        <Footer />
+      </main>
+    </>
+  );
 }

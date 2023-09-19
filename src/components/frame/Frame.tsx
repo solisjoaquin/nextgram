@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import { Photo } from '../../photos'
+import Image from "next/image";
+import { Photo } from "../../photos";
 
 export default function Frame({ photo }: { photo: Photo }) {
   return (
@@ -7,8 +7,8 @@ export default function Frame({ photo }: { photo: Photo }) {
       <Image
         alt=""
         src={photo.imageSrc}
-        height={600}
-        width={600}
+        height={300}
+        width={300}
         className="w-full object-cover aspect-square col-span-2"
       />
 
@@ -17,5 +17,5 @@ export default function Frame({ photo }: { photo: Photo }) {
         <p>Taken by {photo.username}</p>
       </div>
     </>
-  )
+  );
 }
