@@ -12,9 +12,15 @@ export default function Frame({ photo }: { photo: Photo }) {
         className="w-full object-cover aspect-square col-span-2"
       />
 
-      <div className="bg-white p-4 px-6">
-        <h3>{photo.name}</h3>
-        <p>Taken by {photo.username}</p>
+      <div className="bg-white p-4 px-6 ">
+        <div className="flex justify-between items-center">
+          <h3 className="font-bold">{photo.name}</h3>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
+            Consultar
+          </button>
+        </div>
+
+        <p className="pt-4">{photo.description}</p>
       </div>
     </>
   );

@@ -15,7 +15,7 @@ export default function Home() {
           <h1 className="flex items-center gap-2">
             <BuildIcon />
             <div>
-              <h1 className="text-3xl sf-pro ">La olmeda</h1>
+              <h1 className="text-3xl font-bold">La olmeda</h1>
               <p className="text-sm">Jose Maria Bedoya 332</p>
             </div>
           </h1>

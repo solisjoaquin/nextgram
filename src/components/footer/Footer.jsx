@@ -204,7 +204,7 @@ const Footer = () => {
               {icon.icon}
             </div>
             <div className="">
-              <h3 className="text-2xl font-semibold text-black mb-2 sf-pro">
+              <h3 className="text-2xl font-semibold text-black mb-2 sf-pro text-center">
                 {icon.title}
               </h3>
             </div>
